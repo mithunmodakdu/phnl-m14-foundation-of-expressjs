@@ -1,27 +1,27 @@
 [
   {
-    "title": "JavaScript for Beginners",
+    "title": "JavaScript",
     "body": "Learn the basics of JavaScript, including variables, functions, loops, and DOM manipulation.",
     "createdAt": "2025-05-25T10:00:00Z"
   },
   {
-    "title": "Mastering Python",
+    "title": "Python",
     "body": "Dive deep into Python programming with a focus on data structures, OOP, and real-world projects.",
     "createdAt": "2025-04-18T15:30:00Z"
   },
   {
-    "title": "React Fundamentals",
-    "body": "Build dynamic web applications with React, JSX, components, and hooks.",
+    "title": "React",
+    "body": "Build dynamic web applications with React",
     "createdAt": "2025-03-10T09:45:00Z"
   },
   {
-    "title": "Introduction to C++",
-    "body": "Understand the core concepts of C++ programming including syntax, memory management, and STL.",
+    "title": "C++",
+    "body": "Understand the core concepts of C++",
     "createdAt": "2025-02-20T12:20:00Z"
   },
   {
-    "title": "Node.js and Express",
-    "body": "Learn backend development using Node.js and Express framework with REST APIs and MongoDB integration.",
+    "title": "Express",
+    "body": "Learn Express framework",
     "createdAt": "2025-01-05T17:10:00Z"
   }
 ]

@@ -12,7 +12,9 @@ app.use(express_1.default.json());
 app.get("/", (req, res) => {
     res.send("Welcome to ToDos App");
 });
-app.get("/todos", (req, res) => {
+app.get("/todos/:title/:body", (req, res) => {
+    console.log("From query", req.query);
+    console.log("From params", req.params);
     const data = fs_1.default.readFileSync(filePath, { encoding: "utf-8" });
     res.json(data);
 });
