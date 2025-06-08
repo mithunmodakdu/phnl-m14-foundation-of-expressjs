@@ -8,6 +8,17 @@ const app: Application = express();
 
 app.use(express.json());
 
+const todosRouter = express.Router();
+app.use('/todos', todosRouter)
+
+todosRouter.get("/all-todos", (req: Request, res: Response) => {
+  const data = fs.readFileSync(filePath, { encoding: "utf-8" });
+  res.json({
+    message: "From todosRouter",
+    data
+  });
+})
+
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to ToDos App");
 });
