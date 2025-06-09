@@ -10,9 +10,30 @@ const filePath = path_1.default.join(__dirname, "../db/todo.json");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const usersRouter = express_1.default.Router();
-app.use('/todos', todos_router_1.todosRouter);
-app.use('/users', usersRouter);
-app.get("/", (req, res) => {
+app.use("/todos", todos_router_1.todosRouter);
+app.use("/users", usersRouter);
+// app.get("/", (req: Request, res: Response) => {
+//   res.send("Welcome to ToDos App");
+// });
+//::::: middleware function :::::
+// app.get("/",
+//   (req: Request, res: Response, next: NextFunction) => {
+//     console.log("Welcome middleware");
+//     next();
+//   },
+//   (req: Request, res: Response) => {
+//     res.send("Welcome to ToDos App");
+//   }
+// );
+//::::: logger using middleware function :::::
+app.get("/", (req, res, next) => {
+    console.log({
+        url: req.url,
+        method: req.method,
+        headers: req.headers
+    });
+    next();
+}, (req, res) => {
     res.send("Welcome to ToDos App");
 });
 // ::::: params, query ::::
